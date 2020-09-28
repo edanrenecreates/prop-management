@@ -1,6 +1,7 @@
 //Base
 @import 'variables';
 @import 'base';
+
 //Header
 @import 'header';
 
@@ -8,4 +9,6 @@
 @import 'signin';
 @import 'signup';
 
+//Helpers
 @import 'form-title';
+@import 'form-fields';
