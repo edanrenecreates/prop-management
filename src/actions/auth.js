@@ -10,6 +10,9 @@ export function signup(fields, success) {
   return function(dispatch) {
     axios.post(`${ROOT_URL}/signup`, fields)
     .then(response => {
+      const { token } = response.data;
+      localStorage.setItem('token', token);
+      localStorage.getItem('token');
       console.log(response);
       dispatch({
         type: AUTHENTICATE_USER,

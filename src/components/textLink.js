@@ -7,7 +7,7 @@ class TextLink extends Component {
     const { to, text } = this.props;
 
     return(
-      <Link to='to' className='text-link'>
+      <Link to={to} className='text-link'>
         {text}
       </Link>
     )
