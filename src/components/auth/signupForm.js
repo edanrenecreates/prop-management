@@ -14,10 +14,11 @@ class SignupForm extends Component {
       <form onSubmit={handleSubmit} className='sign-up-form'>     
         <FormTitle className='sign-up-form__title' text='New User' />
 
-        <Field className='sign-up-fullName'
-          placeholder='Enter Your Full Name'
-          name='fullname'
-          type='text'
+        <Field 
+          className="sign-up-form__fullname"
+          placeholder="Enter Your Full Name"
+          name="fullname"
+          type="text"
           title="Full Name"
           component={FormInput}
         />

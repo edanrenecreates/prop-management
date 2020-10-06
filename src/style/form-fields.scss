@@ -1,6 +1,6 @@
 .form-input {
   display: grid;
-  grid-template-row: 1fr;
+  grid-row: 1fr;
   grid-template-columns: 3fr 10fr;
   // grid-template-columns: 129px 500px;
 
@@ -15,7 +15,7 @@
   }
   &__input {
     grid-row: 1/-1;
-    grid-columns: 2/3;
+    grid-template-columns: 2/3;
   }
 }
 .form-input {
