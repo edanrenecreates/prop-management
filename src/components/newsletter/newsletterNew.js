@@ -12,7 +12,7 @@ class NewNewsletter extends Component {
     // }
       this.props.history.push('/dashboard');
   }
-  onCancel = () => {
+  onCancel = () => {ƒ
     this.props.history.push('/dashboard');
   }
   render() {

@@ -3,7 +3,12 @@ import {
   signIn
 }from './auth';
 
+import {
+  fetchNewsletters
+} from './newsletter';
+
 export {
   signup,
-  signIn
+  signIn,
+  fetchNewsletters
 };
