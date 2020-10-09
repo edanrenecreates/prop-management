@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
+import { reduxForm, Field, submit } from 'redux-form';
 
 import { FormTitle } from '../formTitle';
 import { FormInput, FormButton, FormTextArea } from '../formFields';
@@ -27,13 +27,22 @@ class NewNewsletterForm extends Component {
           title="Body"
           component={FormTextArea}
         />
-        <Field className='sign-in-form__submit'
+        <Field className='new-newsletter-form__submit'
           small={true}
           danger={true}
           name='submit'
-          type='Submit'
+          type='submit'
           title="Submit"
           component={FormButton}
+        />
+        <Field className='new-newsletter-form__cancel'
+          small={true}
+          danger={false}
+          name='cancel'
+          type='button'
+          title="Cancel"
+          component={FormButton}
+          onClick={this.props.onCancel}
         />
         </form>
     )
