@@ -30,9 +30,9 @@ export class FormTextArea extends Component {
           type={type}
           {...input}
           placeholder={placeholder}
-          >
+        >
 
-          </textarea>
+        </textarea>
       </div>
     )
   }
@@ -41,13 +41,13 @@ export class FormTextArea extends Component {
 export class FormButton extends Component {
   render() {
     const { className, title, input, type, small, danger, onClick } = this.props;
-    
+
     return (
       <div className={`${className} ${small ? 'form-button-small' : 'form-button'}`}>
         <button
           className={`
           ${small ? 'form-button-small' : 'form-button'}__button 
-          ${danger ? 'form-button-small__danger' : '' }          
+          ${danger ? 'form-button-small__danger' : ''}          
           `}
           type={type}
           {...input}
@@ -70,8 +70,25 @@ export class FormImage extends Component {
           className='form-image__image'
           src={imageUrl}
         />
-        <input {...input} type={type}/>
-        {/* replace button goes here */}
+        <input
+          className='form-image__replace'
+          type='button'
+          //id=''
+          value='Replace'
+          onClick={
+            () => 
+            document.getElementById('file') ? document.getElementById('file').click() : ''
+          }
+
+        />
+        <input {...input}
+          type='file'
+          style={{ display: 'none' }}
+          id='file'
+          name='file'
+          accepts='image/*'
+          value={undefined}
+        />
       </div>
     )
   }
