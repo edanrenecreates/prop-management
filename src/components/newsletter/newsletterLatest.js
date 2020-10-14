@@ -7,8 +7,9 @@ import Button from '../button';
 class NewsletterLatest extends Component {
 
   handleEdit = () => {
-    this.props.history.push('/newsletter/edit');
+    this.props.history.push(`/newsletter/edit/${this.props._id}`);
   }
+
   render() {
     const { title, imageUrl, body } = this.props;
     return (
@@ -21,7 +22,6 @@ class NewsletterLatest extends Component {
           <p>{body}</p>
         </div>
       </div>
-
     );
   }
 }
