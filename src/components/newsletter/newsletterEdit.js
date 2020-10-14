@@ -11,11 +11,17 @@ class EditNewsletter extends Component {
     //   console.log('tyring to submit to the backend.');
     // }
     this.props.history.push('/dashboard');
-  }
+  };
   onCancel = () => {
     ƒ
     this.props.history.push('/dashboard');
+  };
+
+  componentDidMount() {
+    // this.prosp.fetchNewsletterWithId()
+    console.log(this.props.match.params.id);
   }
+
   render() {
     return (
       <div className='new-newsletter'>
