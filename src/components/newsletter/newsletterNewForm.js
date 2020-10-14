@@ -1,63 +1,70 @@
-import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
+import React, { Component } from "react";
+import { reduxForm, Field } from "redux-form";
 
-import { FormTitle } from '../formTitle';
-import { FormInput, FormButton, FormTextArea, FormImage } from '../formFields';
+import { FormTitle } from "../formTitle";
+import { FormInput, FormButton, FormTextArea, FormImage } from "../formFields";
 
 class NewNewsletterForm extends Component {
   render() {
 
-    const { handleSubmit, title } = this.props;
+    const { handleSubmit, formTitle, newsletterToEdit } = this.props;
+
+    const { title, body, imageUrl } = newsletterToEdit;
 
     return (
-      <form onSubmit={handleSubmit} className='new-newsletter-form'>
-        <FormTitle className='new-newsletter-form__title' text={title} />
-        <Field className='new-newsletter-form__newsletter-title'
-          placeholder='Newsletter Title'
-          name='title'
-          type='text'
+      <form onSubmit={handleSubmit} className="new-newsletter-form">
+        <FormTitle className="new-newsletter-form__title" text={formTitle} />
+        <Field
+          className="new-newsletter-form__newsletter-title"
+          placeholder="Newsletter Title"
+          name="title"
+          type="text"
           title="Newsletter Title"
           component={FormInput}
         />
-        <Field className='new-newsletter-form__body'
-          placeholder='Newsletter Body'
-          name='body'
-          type='text'
+        <Field
+          className="new-newsletter-form__body"
+          placeholder="Newsletter Body"
+          name="body"
+          type="text"
           title="Body"
           component={FormTextArea}
         />
-        <Field className='new-newsletter-form__submit'
+        <Field
+          className="new-newsletter-form__submit"
           small={true}
           danger={true}
-          name='submit'
-          type='submit'
+          name="submit"
+          type="submit"
           title="Submit"
           component={FormButton}
         />
-        <Field className='new-newsletter-form__cancel'
+        <Field
+          className="new-newsletter-form__cancel"
           small={true}
-          danger={false}
-          name='cancel'
-          type='button'
+          name="cancel"
+          type="button"
           title="Cancel"
           component={FormButton}
           onClick={this.props.onCancel}
         />
-        <Field className='new-newsletter-form__image'
+        <Field
+          className="new-newsletter-form__image"
           small={true}
-          danger={false}
-          name='image'
-          type='file'
+          name="image"
+          type="file"
           title="Image"
           component={FormImage}
         />
-        </form>
-    )
+
+
+      </form>
+    );
   }
 }
 
 NewNewsletterForm = reduxForm({
-  form: 'newnewsletter'
+  form: "newnewsletter"
 })(NewNewsletterForm);
 
 export default NewNewsletterForm;

@@ -1,28 +1,29 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import NewNewsletterForm from './newsletterNewForm';
+import NewNewsletterForm from "./newsletterNewForm";
 
 class NewNewsletter extends Component {
-
-  onSubmit = (fields) => {
-
+  onSubmit = fields => {
     // if(button == 'submit') {
-    //   // Save new newsletter on the backend
-    //   console.log('tyring to submit to the backend.');
+    //   // save new newsletter on the backend. perform a post request here.
+    //   console.log('trying to submit to backend.');
     // }
-      this.props.history.push('/dashboard');
-  }
-  onCancel = () => {ƒ
-    this.props.history.push('/dashboard');
-  }
+    this.props.history.push("/dashboard");
+  };
+
+  onCancel = () => {
+    this.props.history.push("/dashboard");
+  };
+
   render() {
     return (
-      <div className='new-newsletter'>
-        <NewNewsletterForm onCancel={() => this.onCancel()} 
-        onSubmit={(event) => this.onSubmit(event)}
-        title='New Newsletter'
+      <div className="new-newsletter">
+        <NewNewsletterForm
+          onCancel={() => this.onCancel()}
+          onSubmit={event => this.onSubmit(event)}
+          formTitle='New Newsletter'
         />
-        </div>      
+      </div>
     );
   }
 }
