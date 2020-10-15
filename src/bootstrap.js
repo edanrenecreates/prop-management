@@ -15,13 +15,13 @@ import history from './history';
 
 import Layout from './components/layout';
 
-// Auth components
+// AUTH
 import requireAuth from './components/requireAuth';
 import Signup from './components/auth/signup';
 import Signin from './components/auth/signin';
 
-// Dashboard
-import Dashboard from './components/dashboard'
+// DASHBOARD
+import Dashboard from './components/dashboard';
 import NewNewsletter from './components/newsletter/newsletterNew';
 import EditNewsletter from './components/newsletter/newsletterEdit';
 
@@ -34,10 +34,10 @@ function main() {
             <Route path='/' exact component={Signin} />
             <Route path='/signin' component={Signin} />
             <Route path='/signup' component={Signup} />
-            
-            <Route path='/dashboard' component={requireAuth(Dashboard)}/>
-            <Route path='/newsletter/new' component={requireAuth(NewNewsletter)}/>
-            <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)}/>
+
+            <Route path='/dashboard' component={requireAuth(Dashboard)} />
+            <Route path='/newsletter/new' component={requireAuth(NewNewsletter)} />
+            <Route path='/newsletter/edit/:id' component={requireAuth(EditNewsletter)} />
           </Layout>
         </Switch>
       </Router>

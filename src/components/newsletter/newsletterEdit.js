@@ -5,7 +5,7 @@ import * as actions from '../../actions';
 import NewNewsletterForm from "./newsletterNewForm";
 
 class EditNewsletter extends Component {
-  onSubmit = (fields) => {
+  onSubmit = fields => {
     // if(button == 'submit') {
     //   // save new newsletter on the backend. perform a post request here.
     //   console.log('trying to submit to backend.');
@@ -19,7 +19,6 @@ class EditNewsletter extends Component {
 
   componentDidMount() {
     this.props.fetchNewsletterWithId(this.props.match.params.id);
-    // console.log(this.props.match.params.id);
   }
 
   render() {
