@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
@@ -8,7 +7,7 @@ class NewsletterBox extends Component  {
   render() {
     const { date } = this.props;
     if(!date) {
-      return <div>...loading</div>
+      return <div>...fetching newsletters</div>
     }
     return (
       <div className='newsletter-box'>
@@ -20,13 +19,4 @@ class NewsletterBox extends Component  {
   }
 }
 
-function mapStateToProps(state) {
-  const { newsletters } = state.newsletters;
-  const latestNewsletter = newsletters[0];
-  return {
-    ...latestNewsletter
-  }
-}
-
-
-export default connect(mapStateToProps)(NewsletterBox);
+export default NewsletterBox;
