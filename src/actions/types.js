@@ -3,3 +3,6 @@ export const AUTHENTICATE_USER = 'AUTHENTICATE_USER';
 // newsletter actions
 export const SET_NEWSLETTERS = 'SET_NEWSLETTERS';
 export const FETCH_NEWSLETTER_ID = 'FETCH_NEWSLETTER_ID';
+
+// Requests actions
+export const CHANGE_SELECTED_REQUEST_TYPE = 'CHANGE_SELECTED_REQUEST_TYPE';
