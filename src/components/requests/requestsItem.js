@@ -23,11 +23,11 @@ class RequestsItem extends Component {
         
         <div className='requests-item__description'>
           <img 
-          className="requests-item__description-image" 
+          className="requests-item__description-img" 
           src='http://via.placeholder.com/160x95'
           />
           <p className='requests-item__description-text'>
-            I'm baby everyday carry iceland la croix sustainable 90's, cray flexitarian
+            I'm baby everyday carry iceland la croix sustainable 90's, cray flexitarian.I'm baby everyday carry iceland la croix sustainable 90's, cray flexitarian.I'm baby everyday carry iceland la croix sustainable 90's, cray flexitarian.
           </p>
         </div>
       </div>
