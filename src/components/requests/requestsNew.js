@@ -15,7 +15,7 @@ class NewRequest extends Component {
 
     console.log(title, body, image);
 
-    this.props.createNewRequest(this.props._id, fields, () => {
+    this.props.createNewRequest(this.props._id, formData, () => {
       this.props.history.push("/dashboard");
     })
 
