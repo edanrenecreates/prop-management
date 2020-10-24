@@ -7,10 +7,14 @@ import NewNewsletterForm from "../newsletter/newsletterNewForm";
 
 class NewRequest extends Component {
   onSubmit = fields => {
-    // if(button == 'submit') {
-    //   // save new newsletter on the backend. perform a post request here.
-    //   console.log('trying to submit to backend.');
-    // }
+    const { title, body, image } = fields;
+    let formData = new FormData();
+    formData.append('title', title)
+    formData.append('body', body)
+    formData.append('image', image)
+
+    console.log(title, body, image);
+
     this.props.createNewRequest(this.props._id, fields, () => {
       this.props.history.push("/dashboard");
     })
