@@ -5,4 +5,9 @@
 
   display: grid;
   grid-row-gap: 2rem;
+
+  border: 1px solid $color-gray-E6;
+  border-radius: .5rem;
+
+  height: 100%;
 }
