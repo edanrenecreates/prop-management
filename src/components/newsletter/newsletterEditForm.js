@@ -1,22 +1,23 @@
+
 import React, { Component } from "react";
+
 import { reduxForm, Field } from "redux-form";
 import { connect } from 'react-redux';
 
 import { FormTitle } from "../formTitle";
 import { FormInput, FormButton, FormTextArea, FormImage } from "../formFields";
 
-
+import { ROOT_URL } from '../../config';
 
 class EditNewsletterForm extends Component {
+
   render() {
 
     const { handleSubmit, formTitle } = this.props;
     const {
       fieldOnePlaceholder, fieldOneTitle,
       fieldTwoPlaceholder, fieldTwoTitle
-
     } = this.props;
-
 
     return (
       <form onSubmit={handleSubmit} className="new-newsletter-form">
@@ -62,6 +63,9 @@ class EditNewsletterForm extends Component {
           type="file"
           title="Image"
           component={FormImage}
+          imageUrl={this.props.initialValues.imageUrl ?
+            `${ROOT_URL}/${this.props.initialValues.imageUrl}` :
+            'https://source.unsplash.com/random/150x137'}
         />
 
 
