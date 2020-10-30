@@ -7,11 +7,18 @@ import EditNewsletterForm from "./newsletterEditForm";
 
 class EditNewsletter extends Component {
   onSubmit = fields => {
-    // if(button == 'submit') {
-    //   // save new newsletter on the backend. perform a post request here.
-    //   console.log('trying to submit to backend.');
-    // }
-    this.props.history.push("/dashboard");
+    const { title, body, image } = fields;
+
+    var formData = new FormData();
+    formData.append('title', title);
+    formData.append('body', body);
+    if(image != undefined){
+      formData.append('image', image);
+    }
+    this.props.createNewNewsletter(formData, () => {
+      this.props.history.push("/dashboard");
+    })
+
   };
 
   onCancel = () => {

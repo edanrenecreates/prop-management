@@ -16,10 +16,10 @@ class NewNewsletter extends Component {
     formData.append('body', body);
     formData.append('image', image);
 
-    this.props.createNewNewsletter(formData, () => {
+    this.props.editNewsletter(formData, () => {
       this.props.history.push("/dashboard");
     })
-
+    
   };
 
   onCancel = () => {
