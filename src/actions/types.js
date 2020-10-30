@@ -7,3 +7,6 @@ export const FETCH_NEWSLETTER_ID = 'FETCH_NEWSLETTER_ID';
 // Requests actions
 export const CHANGE_SELECTED_REQUEST_TYPE = 'CHANGE_SELECTED_REQUEST_TYPE';
 export const SET_REQUESTS = 'SET_REQUESTS';
+
+// Headers
+export const UPDATE_HEADER= 'UPDATE_HEADER';

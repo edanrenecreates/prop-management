@@ -17,6 +17,10 @@ import {
   changeStatus
 } from './requests';
 
+import {
+  updateHeader
+} from './header';
+
 export {
   signup,
   signIn,
@@ -27,5 +31,6 @@ export {
   fetchRequests,
   changeStatus,
   createNewNewsletter,
-  editNewsletter
+  editNewsletter,
+  updateHeader
 };
