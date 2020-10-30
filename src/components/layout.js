@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
@@ -5,14 +6,14 @@ import { Header, HeaderBar } from './header';
 
 class Layout extends Component {
   render() {
-    const { title, subtitle, hidebar } = this.props;
+    const { title, subtitle, hideBar } = this.props;
     return (
       <div className='layout-grid'>
         <Header
           title={title}
           subtitle={subtitle}
         />
-        {this.props.hidebar ? '' : <HeaderBar/>}
+        {this.props.hideBar ? '' : <HeaderBar />}
         {this.props.children}
       </div>
     )

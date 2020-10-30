@@ -1,17 +1,16 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 import { connect } from 'react-redux';
 import * as actions from '../actions';
 
 import TabNav from './tabnav';
-import NewsletterGrid from './newsletter/newsletterGrid';
-import RequestsGrid from './requests/requestsGrid';
-
+import NewsletterGrid from "./newsletter/newsletterGrid";
+import RequestsGrid from "./requests/requestsGrid";
 
 class Dashboard extends Component {
 
   componentDidMount() {
-    this.props.updateHeader(`Welcome ${this.props.name}`,'HOA Management', true);
+    this.props.updateHeader(`Welcome ${this.props.name}`, 'HOA Management', true);
   }
 
   constructor(props) {
@@ -22,12 +21,12 @@ class Dashboard extends Component {
         {
           title: 'Newsletter',
           active: true,
-          component: <NewsletterGrid history={this.props.history}/>
+          component: <NewsletterGrid history={this.props.history} />
         },
         {
           title: 'Requests',
           active: false,
-          component: <RequestsGrid history={this.props.history}/>
+          component: <RequestsGrid history={this.props.history} />
         }
       ]
     }
@@ -36,25 +35,25 @@ class Dashboard extends Component {
   handleTabChange = (title) => {
     const tabs = this.state.tabs;
 
-    tabs.map(tab => {      
-      if(tab.title == title) {
+    tabs.map(tab => {
+      if (tab.title == title) {
         tab.active = true
       } else {
         tab.active = false
       }
     })
 
-    this.setState({tabs});
+    this.setState({ tabs });
   }
- 
 
   render() {
     return (
       <div className='dashboard'>
-        <TabNav handleClick={(title) => this.handleTabChange(title)} tabs={this.state.tabs}/>
+        <TabNav handleClick={(title) => this.handleTabChange(title)} tabs={this.state.tabs} />
       </div>
     )
   }
+
 }
 
 function mapStateToProps(state) {
@@ -63,5 +62,4 @@ function mapStateToProps(state) {
   }
 }
 
-export default connect(mapStateToProps, actions)(Dashboard); 
-
+export default connect(mapStateToProps, actions)(Dashboard);

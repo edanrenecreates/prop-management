@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { connect } from "react-redux";
+import { connect } from 'react-redux';
 
-import * as actions from '../../actions'
+import * as actions from '../../actions';
 
 import SigninForm from './signinForm';
 
 class Signin extends Component {
 
   componentDidMount() {
-    this.props.updateHeader('Welcome to HOA Manager!', 'Please login to continue', false)
+    this.props.updateHeader('Welcome to HOA Manager!', 'Please login to continue', false);
   }
 
   onSubmit = (fields) => {
@@ -19,8 +19,8 @@ class Signin extends Component {
 
   render() {
     return (
-      <div className="sign-in">
-        <SigninForm onSubmit={(event) => this.onSubmit(event)}/>
+      <div className='sign-in'>
+        <SigninForm onSubmit={(event) => this.onSubmit(event)} />
       </div>
     )
   }
