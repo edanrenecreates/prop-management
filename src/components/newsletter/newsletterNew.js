@@ -11,10 +11,10 @@ class NewNewsletter extends Component {
 
     const { title, body, image } = fields;
 
-    let formData = new FormData();
-    formData.append('title', title)
-    formData.append('body', body)
-    formData.append('image', image)
+    var formData = new FormData();
+    formData.append('title', title);
+    formData.append('body', body);
+    formData.append('image', image);
 
     this.props.createNewNewsletter(formData, () => {
       this.props.history.push("/dashboard");
@@ -36,13 +36,13 @@ class NewNewsletter extends Component {
           fieldOnePlaceholder='Newsletter Title'
           fieldOneTitle='Newsletter Title'
           fieldTwoPlaceholder='Body Here'
-          filedTwoTitle='BOody'
+          fieldTwoTitle='Body'
         />
       </div>
     );
   }
 }
 
-NewNewsletter = connect(null, actions)(NewNewsletter)
+NewNewsletter = connect(null, actions)(NewNewsletter);
 
 export default NewNewsletter;

@@ -7,21 +7,20 @@ import axios from 'axios';
 import { ROOT_URL } from '../config';
 
 export function fetchNewsletters() {
-
   return function(dispatch){
-    const token= localStorage.getItem('token');
+    const token = localStorage.getItem('token');
     const headers = {headers: {authorization: token}}
     axios.get(`${ROOT_URL}/newsletters`, headers)
-    .then(response => {
-      dispatch({
-        type: SET_NEWSLETTERS,
-        payload: response.data
+      .then(response => {
+        dispatch({
+          type: SET_NEWSLETTERS,
+          payload: response.data
+        })
       })
-    })
-    .catch(err => {
-      console.log(err);
-    })
-  }
+      .catch(err => {
+       console.log(err);
+      })
+    }
 }
 
 export function fetchNewsletterWithId(id) {
