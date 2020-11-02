@@ -1,38 +1,37 @@
-//Base
+// BASE
 @import 'variables';
 @import 'mixins';
 @import 'base';
 
-//Header
+// HEADER
 @import 'header';
 
-//Auth
+// AUTH
 @import 'signin';
 @import 'signup';
 
-//Helpers
+// HELPERS
 @import 'form-title';
 @import 'form-fields';
 @import 'text-link';
 
-// Dashboard
+// DASHBOARD
 @import 'dashboard';
 @import 'tab-nav';
 
-// Newsletters
+// NEWSLETTERS
 @import 'newsletter-grid';
 @import 'newsletter-box';
 @import 'newsletter-archive';
 @import 'newsletter-latest';
-@import 'button';
 @import 'newsletter-new';
 @import 'newsletter-new-form';
 @import 'newsletter-detail';
 
-// Button
+// BUTTON
 @import 'button';
 
-// Requests
+// REQUESTS 
 @import 'requests-grid';
 @import 'requests-boxes';
 @import 'requests-box';

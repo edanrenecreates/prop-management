@@ -6,19 +6,20 @@ import * as actions from '../../actions';
 import NewNewsletterForm from "../newsletter/newsletterNewForm";
 
 class NewRequest extends Component {
-  onSubmit = fields => {
-    const { title, body, image } = fields;
-    let formData = new FormData();
-    formData.append('title', title)
-    formData.append('body', body)
-    formData.append('image', image)
 
-    console.log(title, body, image);
+  onSubmit = fields => {
+
+    const { title, body, image } = fields;
+
+    var formData = new FormData();
+    formData.append('title', title);
+    formData.append('body', body);
+    formData.append('image', image);
 
     this.props.createNewRequest(this.props._id, formData, () => {
-      this.props.history.push("/dashboard");
+        this.props.history.push("/dashboard");
     })
-
+    
   };
 
   onCancel = () => {
@@ -34,16 +35,17 @@ class NewRequest extends Component {
           formTitle='New Request'
           fieldOnePlaceholder='Service Request Title Here'
           fieldOneTitle='Service Request Title'
-          fieldTwoPlaceholder='Service Request Description Here'
-          filedTwoTitle='Service Request Description'
+          fieldTwoPlaceholder='Description Here'
+          fieldTwoTitle='Description'
         />
       </div>
     );
   }
 }
+
 function mapStateToProps(state) {
-  const { _id } = state.auth.user;
-  return { _id }
+    const { _id } = state.auth.user;
+    return { _id }
 }
 
 NewRequest = connect(mapStateToProps, actions)(NewRequest);

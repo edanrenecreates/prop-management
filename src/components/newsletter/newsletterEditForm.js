@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 
 import { reduxForm, Field } from "redux-form";
@@ -14,10 +13,10 @@ class EditNewsletterForm extends Component {
   render() {
 
     const { handleSubmit, formTitle } = this.props;
-    const {
-      fieldOnePlaceholder, fieldOneTitle,
-      fieldTwoPlaceholder, fieldTwoTitle
-    } = this.props;
+    const { 
+        fieldOnePlaceholder, fieldOneTitle,
+        fieldTwoPlaceholder, fieldTwoTitle
+    } = this.props;    
 
     return (
       <form onSubmit={handleSubmit} className="new-newsletter-form">
@@ -29,7 +28,7 @@ class EditNewsletterForm extends Component {
           type="text"
           title={fieldOneTitle}
           component={FormInput}
-        />
+        />  
         <Field
           className="new-newsletter-form__body"
           placeholder={fieldTwoPlaceholder}
@@ -46,7 +45,7 @@ class EditNewsletterForm extends Component {
           type="submit"
           title="Submit"
           component={FormButton}
-        />
+        />  
         <Field
           className="new-newsletter-form__cancel"
           small={true}
@@ -55,7 +54,7 @@ class EditNewsletterForm extends Component {
           title="Cancel"
           component={FormButton}
           onClick={this.props.onCancel}
-        />
+        />  
         <Field
           className="new-newsletter-form__image"
           small={true}
@@ -64,10 +63,9 @@ class EditNewsletterForm extends Component {
           title="Image"
           component={FormImage}
           imageUrl={this.props.initialValues.imageUrl ?
-            `${ROOT_URL}/${this.props.initialValues.imageUrl}` :
-            'https://source.unsplash.com/random/150x137'}
-        />
-
+                    `${ROOT_URL}/${this.props.initialValues.imageUrl}` :
+                    'http://via.placeholder.com/150x137'}
+        />  
 
       </form>
     );
@@ -82,7 +80,7 @@ EditNewsletterForm = reduxForm({
 function mapStateToProps(state) {
   const { newsletterToEdit } = state.newsletters;
   return {
-    initialValues: newsletterToEdit
+      initialValues: newsletterToEdit
   }
 }
 

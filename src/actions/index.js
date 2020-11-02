@@ -1,36 +1,36 @@
 import {
-  signup,
-  signIn
-}from './auth';
+    signUp,
+    signIn
+} from './auth';
 
-import {
-  fetchNewsletters,
-  fetchNewsletterWithId,
-  createNewNewsletter,
-  editNewsletter
+import { 
+    fetchNewsletters,
+    fetchNewsletterWithId,
+    createNewNewsletter,
+    editNewsletter
 } from './newsletter';
 
 import {
-  changeSelectedRequestType,
-  createNewRequest,
-  fetchRequests,
-  changeStatus
+    changeSelectedRequestType,
+    createNewRequest,
+    fetchRequests,
+    changeStatus
 } from './requests';
 
 import {
-  updateHeader
+    updateHeader
 } from './header';
 
 export {
-  signup,
-  signIn,
-  fetchNewsletters,
-  fetchNewsletterWithId,
-  changeSelectedRequestType,
-  createNewRequest,
-  fetchRequests,
-  changeStatus,
-  createNewNewsletter,
-  editNewsletter,
-  updateHeader
+    signUp,
+    signIn,
+    fetchNewsletters,
+    fetchNewsletterWithId,
+    changeSelectedRequestType,
+    createNewRequest,
+    fetchRequests,
+    changeStatus,
+    createNewNewsletter,
+    editNewsletter,
+    updateHeader
 };

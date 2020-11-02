@@ -1,3 +1,4 @@
+
 .requests-box {
     align-content: center;
 
@@ -12,20 +13,20 @@
     justify-items: center;
     grid-template-rows: [s] 8.1rem [m] 2.3rem [e];
     grid-template-columns: [s] 1fr [e];
-    
+
     &:hover {
         border-color: $color-red-BA;
-        background-color: #fff;
+        background-color: white;
         .requests-box__point {
-            background-color: #fff;
-        }
-        .requests-box__icon {
-            transform: translateX(0);
-            opacity: 1;
+            display: none;
         }
         .requests-box__count {
             transform: translateX(100px);
             opacity: 0;
+        }
+        .requests-box__icon {
+            transform: translateX(0);
+            opacity: 1;
         }
         .requests-box__title {
             color: $color-red-BA;
@@ -33,8 +34,9 @@
     }
 
     &__count,
-    &__icon  {
+    &__icon {
         transition: all .3s ease;
+
         align-self: end;
         font-size: 7rem;
         line-height: 8.1rem;
@@ -51,7 +53,7 @@
         opacity: 0;
         font-size: 5rem;
     }
-    
+
     &__title {
         align-self: start;
         font-size: 2rem;
